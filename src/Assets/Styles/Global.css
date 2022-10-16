@@ -1,0 +1,88 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+}
+
+li,
+a {
+    text-decoration: none;
+    list-style: none;
+}
+
+.main-bg {
+    background: black;
+    overflow: hidden;
+    background: no-repeat, cover, rgba(0, 0, 0, .4), url("../Images/Background.jpg");
+    background-image: linear-gradient(10deg, rgba(0, 0, 0, .9), transparent 60%, rgba(0, 0, 0, 1)), url("../Images/Background.jpg");
+
+}
+
+.primary-color {
+    color: aliceblue;
+}
+
+.primary-bg {
+    background-color: black;
+}
+
+.xlg-text {
+    font-size: 5rem;
+}
+
+.xmd-text {
+    font-size: 2rem;
+}
+
+.md-text {
+    font-size: 1.5rem;
+}
+
+.sm-text {
+    font-size: 1rem;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.text-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.grid-col4 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.p50-RL {
+    padding: 0 50px;
+}
+
+.p50-All {
+    padding: 50px;
+}
+
+.primary-btn {
+    background-color: aliceblue;
+    border: none;
+    border-radius: 10px;
+    width: 70%;
+    padding: 10px 0;
+    margin: 0 auto;
+    cursor: pointer;
+}

@@ -1,7 +1,12 @@
 import React from "react";
+import Nav from "../Components/Nav"
 
 function Products() {
-  return <div>Products</div>;
+  return (
+    <div>
+      <Nav />
+    </div>
+  )
 }
 
 export default Products;

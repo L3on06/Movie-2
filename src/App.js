@@ -1,9 +1,15 @@
-import './App.css';
+import './Assets/Styles/Global.css';
+import Home from './Pages/Home'
+import Products from './Pages/Products'
+import { Routes, Route } from "react-router-dom"
+
 
 function App() {
   return (
-    <div className="App">
-    </div>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/products" element={<Products />} />
+    </Routes>
   );
 }
 
