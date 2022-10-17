@@ -18,7 +18,15 @@ a {
     overflow: hidden;
     background: no-repeat, cover, rgba(0, 0, 0, .4), url("../Images/Background.jpg");
     background-image: linear-gradient(10deg, rgba(0, 0, 0, .9), transparent 60%, rgba(0, 0, 0, 1)), url("../Images/Background.jpg");
+}
 
+.about-bg {
+    background-image: url(../Images/backgroundAbout.jpg);
+
+}
+
+.LineBottom {
+    border-bottom: 10px solid rgb(55, 54, 54);
 }
 
 .primary-color {
@@ -64,13 +72,22 @@ a {
     justify-content: center;
 }
 
+.grid-col2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
 .grid-col4 {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
 }
 
+.m20-TB {
+    margin: 20px 0;
+}
+
 .p50-RL {
-    padding: 0 50px;
+    padding: 0 20px;
 }
 
 .p50-All {
@@ -84,5 +101,9 @@ a {
     width: 70%;
     padding: 10px 0;
     margin: 0 auto;
+    cursor: pointer;
+}
+
+.cursor-pointer {
     cursor: pointer;
 }

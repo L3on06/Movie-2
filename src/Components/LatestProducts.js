@@ -15,7 +15,7 @@ function LatestProducts({ movies }) {
 
 
   return (
-    <section>
+    <section className="LineBottom">
       <div className="latest-products primary-bg">
         <h1 className="xlg-text primary-color flex">Most recent</h1>
         <div className="flex card-container container">
@@ -43,7 +43,7 @@ function LatestProducts({ movies }) {
                     <p className="card-des"></p>
                   </div>
                 </div>
-                <Link className="primary-btn flex" to="/">Whatch More</Link>
+                <Link className="primary-btn flex" to={`/product/${movie.id}`}>Whatch More</Link>
               </SwiperSlide>
             ))}
           </Swiper>
