@@ -5,6 +5,7 @@ import { useParams } from "react-router-dom";
 import Nav from "../Components/Nav";
 import NoImage from '../Assets/Images/noimage.png'
 import axios from 'axios'
+import Footer from "../Components/Footer";
 
 
 function Product() {
@@ -20,27 +21,30 @@ function Product() {
         axios.get(API_URL)
             .then(resp => {
                 setMovie(resp.data)
-                // console.log(resp.data)
+                console.log(resp.data)
                 // setLoading(false)
             })
             .catch(e => console.log(e))
     }, [])
 
     return (
-        <div className="product about-bg">
-            <Nav />
-            <div className="">
-                {movie &&
-                    <div className="primary-color grid-col2 container p50-RL">
-                        {movie.poster_path === null ? <img className="product-img" src={NoImage} alt="card"></img> : <img className="product-img" src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`} alt="Card"></img>}
-                        <div className="p50-RL">
-                            <h4 className="product-title text-center">{movie.title}</h4>
-                            <p className="product-des">{movie.overview}</p>
-                        </div>
-                    </div>}
-
+        <div>
+            <div className="product about-bg ">
+                <Nav />
+                <div className="m20-TB">
+                    {movie &&
+                        <div className="primary-color grid-col2 container p50-RL">
+                            {movie.poster_path === null ? <img className="product-img" src={NoImage} alt="card"></img> : <img className="product-img" src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`} alt="Card"></img>}
+                            <div className="p50-RL">
+                                <h4 className="product-title m50-TB text-center">{movie.title}</h4>
+                                <p className="product-des">{movie.overview}</p>
+                                <button className="product-btn flex m50-TB">Watch Now</button>
+                            </div>
+                        </div>}
+                </div>
             </div>
-        </div >
+            <Footer />
+        </div>
     )
 }
 

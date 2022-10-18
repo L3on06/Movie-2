@@ -43,7 +43,7 @@ function LatestProducts({ movies }) {
                     <p className="card-des"></p>
                   </div>
                 </div>
-                <Link className="primary-btn flex" to={`/product/${movie.id}`}>Whatch More</Link>
+                <Link className="primary-btn flex secondary-color" to={`/product/${movie.id}`}>Whatch More</Link>
               </SwiperSlide>
             ))}
           </Swiper>

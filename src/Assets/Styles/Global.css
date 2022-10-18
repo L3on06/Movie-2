@@ -14,15 +14,34 @@ a {
 }
 
 .main-bg {
-    background: black;
-    overflow: hidden;
+    height: 100vh;
     background: no-repeat, cover, rgba(0, 0, 0, .4), url("../Images/Background.jpg");
     background-image: linear-gradient(10deg, rgba(0, 0, 0, .9), transparent 60%, rgba(0, 0, 0, 1)), url("../Images/Background.jpg");
+    overflow: hidden;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
 }
 
 .about-bg {
+    height: 100vh;
     background-image: url(../Images/backgroundAbout.jpg);
+    overflow: hidden;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
 
+.products-bg {
+    background: url(../Images/products.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    overflow-x: hidden;
+    background-position: center;
+    background-attachment: fixed;
 }
 
 .LineBottom {
@@ -35,6 +54,14 @@ a {
 
 .primary-bg {
     background-color: black;
+}
+
+.secondary-color {
+    color: black;
+}
+
+.secondary-bg {
+    color: aliceblue;
 }
 
 .xlg-text {
@@ -83,7 +110,11 @@ a {
 }
 
 .m20-TB {
-    margin: 20px 0;
+    margin: 20px auto;
+}
+
+.m50-TB {
+    margin: 50px auto;
 }
 
 .p50-RL {
