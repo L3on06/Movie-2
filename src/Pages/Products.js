@@ -16,7 +16,7 @@ function Products() {
   const BASE_URL = 'https://api.themoviedb.org/3'
 
   useEffect(() => {
-    const API_URL = `${BASE_URL}/discover/movie/?page=${page}&certification_country=US&certification=R&sort_by=vote_average.desc&${API_KEY}`
+    const API_URL = `${BASE_URL}/discover/movie/?page=${page}&${API_KEY}`
 
     axios.get(API_URL)
       .then(resp => {
