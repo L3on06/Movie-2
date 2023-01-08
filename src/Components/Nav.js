@@ -15,14 +15,9 @@ function Nav() {
         </div>
         <div className="nav-menu">
           <ul className="nav-item flex p50-RL">
-            <li><Link className="nav-link primary-color  xmd-text" to="/">Home</Link></li>
-            <li><Link className="nav-link primary-color  xmd-text" to="/products">Products</Link></li>
+            <li><Link className="nav-link primary-color xmd-text" to="/">Home</Link></li>
+            <li><Link className="nav-link primary-color xmd-text" to="/products">Products</Link></li>
           </ul>
-          <div class="menu">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-          </div>
         </div>
       </div>
     </nav>

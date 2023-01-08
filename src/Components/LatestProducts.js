@@ -21,18 +21,16 @@ function LatestProducts({ movies }) {
         <div className="flex card-container container">
           <Swiper
             modules={[Navigation, A11y, Autoplay]}
-            // spaceBetween={20}
             grabCursor={true}
             touchEventsTarget={'container'}
             slidesPerView={4}
             loop={true}
             autoplay={{
-              delay: 4000,
+              delay: 3000,
               disableOnInteraction: false,
               pauseOnMouseEnter: true,
             }}
             navigation
-          // scrollbar={{}}
           >
             {movies && movies.map(movie => (
               <SwiperSlide>

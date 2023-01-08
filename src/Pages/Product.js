@@ -10,21 +10,17 @@ import Footer from "../Components/Footer";
 
 function Product() {
     const { id } = useParams();
-    const [movie, setMovie] = useState()
-    // const [loading, setLoading] = useState(true)
-
-    const API_KEY = 'api_key=f1927fe38d1e157a80cc612bae6d51fc'
-    const BASE_URL = 'https://api.themoviedb.org/3'
-    const API_URL = `${BASE_URL}/movie/${id}?${API_KEY}`
+    const [movie, setMovie] = useState();
+    const API_KEY = 'api_key=f1927fe38d1e157a80cc612bae6d51fc';
+    const BASE_URL = 'https://api.themoviedb.org/3';
 
     useEffect(() => {
+        const API_URL = `${BASE_URL}/movie/${id}?${API_KEY}`
+
         axios.get(API_URL)
-            .then(resp => {
-                setMovie(resp.data)
-                console.log(resp.data)
-                // setLoading(false)
-            })
+            .then(resp => { setMovie(resp.data) })
             .catch(e => console.log(e))
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
     return (

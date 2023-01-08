@@ -11,10 +11,11 @@ function Home() {
 
   const API_KEY = 'api_key=f1927fe38d1e157a80cc612bae6d51fc';
   const BASE_URL = 'https://api.themoviedb.org/3';
-  const API_URL = `${BASE_URL}/discover/movie/?certification_country=US&certification=R&sort_by=vote_average.desc&${API_KEY}`
 
 
   useEffect(() => {
+    const API_URL = `${BASE_URL}/discover/movie?sort_by=popularity.desc&${API_KEY}`
+
     axios.get(API_URL)
       .then(resp => setMovies(resp.data.results))
       .catch(e => console.log(e))
