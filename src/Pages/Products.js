@@ -10,20 +10,22 @@ import '../Assets/Styles/Components.css';
 function Products() {
   const [page, setPage] = useState(1)
   const [movies, setMovies] = useState([]);
-  const [search, setSearch] = useState('');
+  // const [search, setSearch] = useState('');
 
   const API_KEY = 'api_key=f1927fe38d1e157a80cc612bae6d51fc';
   const BASE_URL = 'https://api.themoviedb.org/3'
+  const API_URL = `${BASE_URL}/discover/movie/?${API_KEY}&page=${page}`
 
   useEffect(() => {
-    const API_URL = `${BASE_URL}/discover/movie/?page=${page}&${API_KEY}`
 
-    axios.get(API_URL)
-      .then(resp => {
-        setMovies(resp.data.results)
-      })
-      .catch(e => console.log(e))
-  }, [page])
+    async function fetchData() {
+      const request = await axios.get(API_URL)
+      setMovies(request.data.results);
+      console.log(request.data.results);
+      return request;
+    }
+    fetchData();
+  }, [page]);
 
   const prevPage = (e) => {
     e.preventDefault()
@@ -51,12 +53,9 @@ function Products() {
       <div>
         <div>
           <form className='search-container text-center p50-All'>
-            <input className='search' onChange={(e) => setSearch(e.target.value)} type="search" name='search' placeholder='Search...'></input>
           </form>
           <div className="primary-color products  p50-RL container">
-            {movies && movies.filter((item) => {
-              return search.toLowerCase() === "" ? item : item.title.toLowerCase().includes(search)
-            }).map(movie => (
+            {movies.map(movie => (
               <div>
                 <Link to={`/product/${movie.id}`}>
                   {movie.poster_path === null ? <img loading='lazy' className="products-img" src={NoImage} alt="card"></img> : <img className="products-img" src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`} alt="Card"></img>}
